@@ -1,0 +1,127 @@
+*{box-sizing: border-box;}
+.topnav{
+    overflow: hidden;    
+    list-style-type: none;
+    background-color: #333;
+}
+li {
+    float: left;
+}
+li a,.dropdown .dropbtn{
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    display: inline-block;
+}
+li a:hover, .dropdown:hover .dropbtn{
+    background-color: red;
+}
+.dropdown .dropdown-content{
+    min-width: 200px;    
+    position: absolute;
+    z-index: 1;
+    background-color: #333;
+    display: none;   
+}
+.dropdown-content a{
+    color: white;
+    display: block;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    content: "";
+    clear: both;
+}
+.responsive{
+    flex: 25%;
+    padding: 20px;
+}
+.gallery img{
+    width: 100%;
+    border-radius: 20px;
+}
+.gallery span{
+    background-color: #333;
+    color: white;    
+}
+.pagination{    
+    display: inline-block;
+    content: "";
+    clear: both;
+}
+.pagination a{     
+    float: left;   
+    text-decoration: none;
+    padding: 8px 16px;    
+    margin: 20px;
+}
+@keyframes ani {
+    from{background-color: #ddd;color: black;}
+    to{background-color: #333;color: white;}
+}
+.pagination a:hover{
+    animation: ani 3s infinite;
+    color: white;
+}
+.content{
+    text-align: center;
+}
+.content p{
+    text-align: justify;
+    text-indent: 50px;
+}
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer a{text-decoration: none;}
+.footer .card
+{
+    flex: 33.33%;    
+}
+.card ul{
+    list-style-type: none;    
+}
+.card li{
+    display: block;
+}
+.card li img{    
+    height: 50px;
+}
+.card span {
+    padding: 20px;
+    font-size: 30px;
+    opacity: 0.5;
+}
+.card span.tag{
+    display: inline-block;
+}
+.card span:hover{
+    opacity: 1;
+}
+@media screen and (max-width:700px) {
+    .responsive {
+        flex: 50%;
+    }
+    .footer .card
+{
+    flex: 100%;    
+    text-align: center;
+}    
+    .pagination a{
+        padding: 4px 8px;    
+    }
+}
+@media screen and (max-width:600px) {
+    .responsive {
+        flex: 100%;
+    }
+    .pagination a{
+        padding: 2px 4px;    
+    }
+
+}
